@@ -1,0 +1,2 @@
+module tdd_temperature {
+}
