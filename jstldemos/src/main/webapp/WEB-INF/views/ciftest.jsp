@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,17 +9,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Order</h1>
-	<h2>Hello, ${ name }</h2>
-	You ordered: ${ size }<br />
+	<h1>C:If Test</h1>
 	
 	<c:if test="${ upgrade == true }">
-		You upgraded with espresso shot<br />
+		You did an upgrade!<br />
 	</c:if>
-	<c:if test="${ upgrade != true }">
-		You did not upgrade<br />
+	
+	<c:if test="${ option1 }">
+		Thank you for adding option1<br />
 	</c:if>
-
-	Your total: ${ price }
+	<c:if test="${ !option1 }">
+		You chose to not upgrade
+	</c:if>
+	
 </body>
 </html>
+
+
+
+
+

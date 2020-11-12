@@ -20,12 +20,14 @@ public class CafeController {
 		model.addAttribute("name", name);
 		model.addAttribute("size", size);
 		
-		if (upgrade) {
+		/*if (upgrade) {
 			model.addAttribute("upgrade", "Shot of espresso");			
 		}
 		else {
 			model.addAttribute("upgrade", "none");
-		}
+		}*/
+		
+		model.addAttribute("upgrade", upgrade);
 		
 		double price = 0;
 		
