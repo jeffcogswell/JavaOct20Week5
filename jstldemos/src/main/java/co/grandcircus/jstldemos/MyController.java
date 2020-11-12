@@ -119,6 +119,30 @@ public class MyController {
 		return "detail";
 	}
 	
+	/*
+	 * Some simple SERVER SIDE VALIDATION
+	 * We receive a number, and we see if it's inside a range.
+	 * If it is, we take them to a page printing out the numbrer
+	 * Otherwise, we take them to an error page.
+	 */
+	@GetMapping("/validationform")
+	public String validationform() {
+		return "validationform";
+	}
+	
+	@PostMapping("/validate")
+	public String validate(int mynumber, Model model) {
+		
+		if (mynumber >= 1 && mynumber <= 10) {
+			model.addAttribute("mynumber", mynumber);
+			return "validate";
+		}
+		else {
+			return "errornumber";
+		}
+		
+	}
+	
 }
 
 
